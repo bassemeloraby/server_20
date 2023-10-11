@@ -13,6 +13,7 @@ app.use(express.json())
 // main routes
 app.use('/api/allDrugs', require('./routes/allDrugsRoutes'));
 app.use('/api/indications', require('./routes/indicationRoutes'));
+app.use('/api/cosmotics', require('./routes/cosmoticRoutes'));
 app.use('/api/users', require('./routes/userRoutes'));
 
 //test route
