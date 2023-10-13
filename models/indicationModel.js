@@ -1,12 +1,17 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const indicationSchema = mongoose.Schema(
   {
-    INDICATION: String,
+    INDICATION: {
+      type: String,
+    },
+    ICD_10_CODE: {
+      type: String,
+    },
   },
   {
-    ICD_10_CODE: String,
+    timestamps: true,
   }
 );
 
-module.exports = mongoose.model('indication', indicationSchema);
+module.exports = mongoose.model("indication", indicationSchema);

@@ -1,12 +1,12 @@
 const mongoose = require("mongoose");
 
-const allDrugsSchema = mongoose.Schema(
+const productSchema = mongoose.Schema(
   {
-    ScientificName: {
+    Description: {
       type: String,
       required: [true, "Please add a value"],
     },
-    TradeName: {
+    Company: {
       type: String,
       required: [true, "Please add a value"],
     },
@@ -16,4 +16,4 @@ const allDrugsSchema = mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model("allDrugs", allDrugsSchema);
+module.exports = mongoose.model("Product", productSchema);
