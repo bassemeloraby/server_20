@@ -13,6 +13,9 @@ const productSchema = mongoose.Schema(
     Category: {
       type: String,
     },
+    usedArea: {
+      type: String,
+    },
   },
   {
     timestamps: true,
