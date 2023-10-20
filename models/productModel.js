@@ -13,7 +13,10 @@ const productSchema = mongoose.Schema(
     Category: {
       type: String,
     },
-    usedArea: {
+    usedArea1: {
+      type: String,
+    },
+    usedArea2: {
       type: String,
     },
   },

@@ -18,7 +18,8 @@ const setProduct = asyncHandler(async (req, res) => {
     Description: req.body.Description,
     Company: req.body.Company,
     Category: req.body.Category,
-    usedArea: req.body.usedArea
+    usedArea1: req.body.usedArea1,
+    usedArea2: req.body.usedArea2
   });
   res.status(200).json(product);
 });
