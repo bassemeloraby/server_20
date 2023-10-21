@@ -10,7 +10,19 @@ const productSchema = mongoose.Schema(
       type: String,
       required: [true, "Please add a value"],
     },
-    Category: {
+    form: {
+      type: String,
+    },
+    companyCategory1: {
+      type: String,
+    },
+    companyCategory2: {
+      type: String,
+    },
+    use1: {
+      type: String,
+    },
+    use2: {
       type: String,
     },
     usedArea1: {
@@ -18,6 +30,32 @@ const productSchema = mongoose.Schema(
     },
     usedArea2: {
       type: String,
+    },
+    skinSenstivety: {
+      type: Boolean,
+      defultValue: false,
+    },
+    normalSkin: {
+      type: Boolean,
+      defultValue: false,
+    },
+    drySkin: {
+      type: Boolean,
+      defultValue: false,
+    },
+    oilySkin: {
+      type: Boolean,
+      defultValue: false,
+    },
+    combinationSkin: {
+      type: Boolean,
+      defultValue: false,
+    },
+    price: {
+      type: Boolean,
+    },
+    picLink: {
+      type: Boolean,
     },
   },
   {

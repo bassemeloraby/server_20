@@ -17,9 +17,20 @@ const setProduct = asyncHandler(async (req, res) => {
   const product = await Product.create({
     Description: req.body.Description,
     Company: req.body.Company,
-    Category: req.body.Category,
+    form: req.body.form,
+    companyCategory1: req.body.companyCategory1,
+    companyCategory2: req.body.companyCategory2,
+    use1: req.body.use1,
+    use2: req.body.use2,
     usedArea1: req.body.usedArea1,
-    usedArea2: req.body.usedArea2
+    usedArea2: req.body.usedArea2,
+    skinSenstivety: req.body.skinSenstivety,
+    normalSkin: req.body.normalSkin,
+    drySkin: req.body.drySkin,
+    oilySkin: req.body.oilySkin,
+    combinationSkin: req.body.combinationSkin,
+    price: req.body.price,
+    picLink: req.body.picLink,
   });
   res.status(200).json(product);
 });
@@ -43,12 +54,16 @@ const deleteProduct = asyncHandler(async (req, res) => {
 const updateProduct = asyncHandler(async (req, res) => {
   const product = await Product.findById(req.params.id);
   if (!product) {
-    res.status(400).json({ message: 'product not found' });
+    res.status(400).json({ message: "product not found" });
   }
- 
-  const updatedProduct = await Product.findByIdAndUpdate(req.params.id, req.body, {
-    new: true,
-  });
+
+  const updatedProduct = await Product.findByIdAndUpdate(
+    req.params.id,
+    req.body,
+    {
+      new: true,
+    }
+  );
   res.status(200).json(updatedProduct);
 });
 
@@ -56,5 +71,5 @@ module.exports = {
   getProducts,
   setProduct,
   deleteProduct,
-  updateProduct
+  updateProduct,
 };
